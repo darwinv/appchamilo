@@ -34,8 +34,8 @@ public class curso {
             ResultSet rs;
         
             String consulta="SELECT title, category_code, course_language, code FROM"
-                    + "course WHERE id ='"+id+"' ";
-            
+                    + " course WHERE id ='"+id+"' ";
+           
             rs = con.a.executeQuery (consulta);
             
             if (rs.next()){ 
@@ -51,6 +51,7 @@ public class curso {
         } catch (SQLException | ClassNotFoundException ex) {
             Logger.getLogger(curso.class.getName()).log(Level.SEVERE, null, ex);
         }
+        this.setCategoriaPorId(id);
     }
 
 
@@ -69,8 +70,8 @@ public class curso {
             ResultSet rs;
         
             String consulta="SELECT name FROM"
-                    + "course_category Inner Join course ON course_category.code = course.category_code"
-                    + " WHERE id ='"+id+"' ";
+                    + " course_category Inner Join course ON course_category.code = course.category_code"
+                    + " WHERE course.id ='"+id+"' ";
             
             rs = con.a.executeQuery (consulta);
             

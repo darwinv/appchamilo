@@ -16,6 +16,8 @@ public class Appchamilo {
      */
     public static void main(String[] args) {
         // TODO code application logic here
+        ventanaCursos ven= new ventanaCursos();
+        ven.setVisible(true);
     }
     
 }
