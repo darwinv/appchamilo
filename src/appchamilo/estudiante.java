@@ -10,12 +10,16 @@ package appchamilo;
  * @author User
  */
 public class estudiante {
-    private int id;
-    private String nombre;
-    private String apellido;
-    private String username;
-    private String correo;
-    private String telefono;
-    private String status;
+    private int id;//user
+    private String nombre;//firstname user
+    private String apellido;//lastname user
+    private String username;//user
+    private String correo;//user
+    private String telefono;//user
+    private String status;//si estatus es diferente de 1 es estudiante
+    
+    public estudiante(){
+    
+    }
     
 }

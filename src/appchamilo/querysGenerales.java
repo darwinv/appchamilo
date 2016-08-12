@@ -21,22 +21,19 @@ public class querysGenerales {
     }
     
    public ArrayList<Integer> getAllCourses(){
+     
        ArrayList<Integer> ids = new ArrayList<>();
        
          try {
             conect con= new conect();     
-            ResultSet rs;
-        
-            String consulta="SELECT id FROM course";
-            
-            rs = con.a.executeQuery (consulta);
+            ResultSet rs;       
+            String consulta="SELECT id FROM course";            
+            rs = con.a.executeQuery (consulta);  
             
             while (rs.next())
                 {
                    ids.add(rs.getInt("id"));
-   
-                }
-            
+                }       
             con.cerrarst();
             con.cerrarCon();
            
@@ -45,4 +42,29 @@ public class querysGenerales {
         }
        return (ids); 
    }
+   
+    public ArrayList<Integer> getAllStudents(){
+     
+       ArrayList<Integer> ids = new ArrayList<>();
+       
+         try {
+            conect con= new conect();     
+            ResultSet rs;       
+            String consulta="SELECT id FROM course";            
+            rs = con.a.executeQuery (consulta);  
+            
+            while (rs.next())
+                {
+                   ids.add(rs.getInt("id"));
+                }       
+            con.cerrarst();
+            con.cerrarCon();
+           
+        } catch (SQLException | ClassNotFoundException ex) {
+            Logger.getLogger(curso.class.getName()).log(Level.SEVERE, null, ex);
+        }
+       return (ids); 
+   }
+   
+   
 }
